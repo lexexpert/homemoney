@@ -58,7 +58,7 @@ export class LoginComponent implements OnInit {
             window.localStorage.setItem('user', JSON.stringify(user));
             this.message.text = '';
             this.authService.login();
-            this.router.navigate(['/']);
+            this.router.navigate(['/system', 'bill']);
           } else {
             this.showMessage({
               text: 'Неправильный пароль',
