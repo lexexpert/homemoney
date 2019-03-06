@@ -13,7 +13,7 @@
     Loading ...
   </div>
   <div class="row" *ngIf="isLoaded">
-    <app-bill-card [bill]="bill" [currency]="currency"></app-bill-card>
-    <app-currency-card></app-currency-card>
+    <app-bill-card [bill]="bill" [currency]="currency" [currency2]="currency2"></app-bill-card>
+    <app-currency-card [currency]="currency" [currency2]="currency2"></app-currency-card>
   </div>
 </section>

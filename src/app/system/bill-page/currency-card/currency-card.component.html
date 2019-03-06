@@ -15,19 +15,19 @@
           </thead>
           <tbody>
           <tr>
-            <td>доллар</td>
-            <td>24</td>
-            <td>12.12.2017</td>
+            <td>CAD</td>
+            <td>{{ currency[0]['sale'] | number:'1.2' }}</td>
+            <td>{{ currendDate | date:'dd.MM.yyyy'}}</td>
           </tr>
           <tr>
-            <td>евро</td>
-            <td>26</td>
-            <td>12.12.2017</td>
+            <td>UAH</td>
+            <td>1</td>
+            <td>{{ currendDate | date:'dd.MM.yyyy'}}</td>
           </tr>
           <tr>
-            <td>рубль</td>
-            <td>0.4</td>
-            <td>12.12.2017</td>
+            <td>USD</td>
+            <td>{{ currency2[0]['sale'] | number:'1.2' }}</td>
+            <td>{{ currendDate | date:'dd.MM.yyyy'}}</td>
           </tr>
           </tbody>
         </table>
