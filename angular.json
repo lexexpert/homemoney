@@ -28,6 +28,7 @@
             ],
             "styles": [
               "src/styles.scss",
+              "src/assets/fonts/fontawesome-free-5.7.2-web/css/all.min.css",
               "src/assets/vendor.css",
               "src/assets/theme.css"
             ],

@@ -12,11 +12,13 @@ export class UsersService extends BaseApi {
   }
 
   getUserByEmail(email: string): Observable<User> {
-    return this.get(`users?email=${email}`);
+    return this.get(`users?email=${email}`)
+      .pipe(map((users: User) => users[0] ? users[0] : undefined));
   }
 
   createNewUser(user: User): Observable<User> {
-    return this.post(`users`, user);
+    return this.post(`users`, user)
+      .pipe(map((users: User) => users[0] ? users[0] : undefined));
   }
 
 }
