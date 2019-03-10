@@ -18,4 +18,8 @@ export class CategoriesService extends BaseApi {
       return this.get('categories');
   }
 
+  updateCategory(category: CategoryModel): Observable<CategoryModel> {
+      return this.put(`categories/${category.id}`, category);
+  }
+
 }
