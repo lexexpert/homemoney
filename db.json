@@ -14,28 +14,28 @@
     }
   ],
   "bill": {
-    "value": 100000,
-    "currency": "RUB"
+    "value": 99920,
+    "currency": "CAD"
   },
   "categories": [
     {
-      "name": "Дом",
-      "capacity": 15000,
+      "name": "Еда",
+      "capacity": 2000,
       "id": 1
     },
     {
-      "name": "Еда",
-      "capacity": 10000,
+      "name": "Автомобиль",
+      "capacity": 5400,
       "id": 2
     },
     {
-      "id": 3,
-      "name": "Машина",
-      "capacity": 7000
+      "name": "Бытовые нужды",
+      "capacity": 6000,
+      "id": 3
     },
     {
-      "name": "Новая категория 2",
-      "capacity": 123,
+      "name": " Аренда",
+      "capacity": 1300,
       "id": 4
     }
   ],
@@ -79,6 +79,22 @@
       "date": "10.06.2017 14:01:58",
       "id": 5,
       "description": "Заправка + проход ТО"
+    },
+    {
+      "type": "outcome",
+      "amount": 10,
+      "category": 3,
+      "date": "09.03.2019 21:22:18",
+      "description": "Мыло",
+      "id": 6
+    },
+    {
+      "type": "outcome",
+      "amount": 150,
+      "category": 1,
+      "date": "11.03.2019 21:31:42",
+      "description": "test",
+      "id": 7
     }
   ]
 }

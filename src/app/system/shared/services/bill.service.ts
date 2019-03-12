@@ -14,6 +14,10 @@ export class BillService extends BaseApi {
     return this.get('bill');
   }
 
+  updateBill(bill: BillModel): Observable<BillModel> {
+    return this.put('bill', bill);
+  }
+
   getCurrency(): Observable<any> {
     // return this.http.get(`http://data.fixer.io/api/latest?access_key=6ffdc8bdd1f7f5ce9e1a91221f5e6147`)
     // return this.http.get(`https://api.privatbank.ua/p24api/exchange_rates?json&date=05.03.2019`)
