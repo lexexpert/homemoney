@@ -23,7 +23,8 @@ import { HistoryChartComponent } from './history-page/history-chart/history-char
 import { HistoryEventsComponent } from './history-page/history-events/history-events.component';
 import { HistoryDetailComponent } from './history-page/history-detail/history-detail.component';
 import { HistoryFilterComponent } from './history-page/history-filter/history-filter.component';
-import {MomentPipe} from './shared/pipe/moment.pipe';
+import {MomentPipe} from './shared/pipes/moment.pipe';
+import {SearchPipe} from './shared/pipes/search.pipe';
 
 @NgModule({
   imports: [
@@ -49,7 +50,8 @@ import {MomentPipe} from './shared/pipe/moment.pipe';
     HistoryEventsComponent,
     HistoryDetailComponent,
     HistoryFilterComponent,
-    MomentPipe
+    MomentPipe,
+    SearchPipe
   ],
   providers: [
     BillService,
