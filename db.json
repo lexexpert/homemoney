@@ -14,7 +14,7 @@
     }
   ],
   "bill": {
-    "value": 99920,
+    "value": 99770,
     "currency": "CAD"
   },
   "categories": [
@@ -95,6 +95,14 @@
       "date": "11.03.2019 21:31:42",
       "description": "test",
       "id": 7
+    },
+    {
+      "type": "outcome",
+      "amount": 150,
+      "category": 1,
+      "date": "13.03.2019 20:34:29",
+      "description": "Test",
+      "id": 8
     }
   ]
 }
