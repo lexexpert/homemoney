@@ -14,7 +14,7 @@
     }
   ],
   "bill": {
-    "value": 99770,
+    "value": 99620,
     "currency": "CAD"
   },
   "categories": [
@@ -76,7 +76,7 @@
       "type": "outcome",
       "amount": 4000,
       "category": 3,
-      "date": "10.06.2017 14:01:58",
+      "date": "08.03.2019 14:01:58",
       "id": 5,
       "description": "Заправка + проход ТО"
     },
@@ -103,6 +103,14 @@
       "date": "13.03.2019 20:34:29",
       "description": "Test",
       "id": 8
+    },
+    {
+      "type": "outcome",
+      "amount": 150,
+      "category": 1,
+      "date": "15.03.2019 00:15:57",
+      "description": "тест",
+      "id": 9
     }
   ]
 }
