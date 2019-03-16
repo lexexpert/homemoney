@@ -9,7 +9,7 @@ import {AuthRoutingModule} from './auth/auth-routing.module';
 import {UsersService} from './shared/services/users.service';
 import {HttpClientModule} from '@angular/common/http';
 import {AuthService} from './shared/services/auth.service';
-import {SystemModule} from './system/system.module';
+import {AuthGuard} from './shared/services/auth.guard';
 
 @NgModule({
   declarations: [
@@ -21,12 +21,12 @@ import {SystemModule} from './system/system.module';
     AuthModule,
     AuthRoutingModule,
     HttpClientModule,
-    SystemModule,
     BrowserAnimationsModule
   ],
   providers: [
     UsersService,
-    AuthService
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

@@ -14,7 +14,7 @@
     }
   ],
   "bill": {
-    "value": 99620,
+    "value": 98670,
     "currency": "CAD"
   },
   "categories": [
@@ -111,6 +111,30 @@
       "date": "15.03.2019 00:15:57",
       "description": "тест",
       "id": 9
+    },
+    {
+      "type": "outcome",
+      "amount": 500,
+      "category": 4,
+      "date": "16.03.2019 13:10:48",
+      "description": "тест",
+      "id": 10
+    },
+    {
+      "type": "outcome",
+      "amount": 150,
+      "category": 1,
+      "date": "16.03.2019 16:15:58",
+      "description": "текст",
+      "id": 11
+    },
+    {
+      "type": "outcome",
+      "amount": 300,
+      "category": 2,
+      "date": "16.03.2019 16:16:04",
+      "description": "тест",
+      "id": 12
     }
   ]
 }

@@ -81,7 +81,7 @@ export class HistoryPageComponent implements OnInit, OnDestroy {
         return filterData.types.indexOf(e.type) !== -1;
       })
       .filter((e) => {
-        return filterData.categories.indexOf(e.category.toString()) !== -1;
+        return filterData.categories.indexOf(e.category) !== -1;
       })
       .filter((e) => {
         const momentDate = moment(e.date, 'DD.MM.YYYY HH:mm:ss');

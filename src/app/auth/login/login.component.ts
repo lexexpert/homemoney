@@ -33,6 +33,11 @@ export class LoginComponent implements OnInit {
             text: 'Теперь Вы можете авторизоваться',
             type: 'success'
           });
+        } else if (params['accessDenied']) {
+          this.showMessage({
+            text: 'Необходимо авторизоваться',
+            type: 'danger'
+          });
         }
       });
     this.form = new FormGroup({
