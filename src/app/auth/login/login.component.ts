@@ -1,17 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Params, Router} from '@angular/router';
+import {Meta, Title} from '@angular/platform-browser';
 
 import {UsersService} from '../../shared/services/users.service';
 import {User} from '../../shared/models/user.model';
 import {Message} from '../../shared/models/message.model';
 import {AuthService} from '../../shared/services/auth.service';
+import {fadeStateTrigger} from '../../shared/animations/fade.animation';
 
 // @ts-ignore
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  animations: [fadeStateTrigger]
 })
 export class LoginComponent implements OnInit {
   form: FormGroup;
@@ -21,8 +24,16 @@ export class LoginComponent implements OnInit {
     private usersService: UsersService,
     private authService: AuthService,
     private router: Router,
-    private route: ActivatedRoute
-  ) { }
+    private route: ActivatedRoute,
+    private title: Title,
+    private meta: Meta
+  ) {
+    title.setTitle('Вход - Домашняя бухгалтерия');
+    meta.addTags([
+      {name: 'keywords', content: 'Домашняя бухгалтерия, домашние финансы, персональные финансы'},
+      {name: 'description', content: 'Страница входа в Домашнюю бухгалтерию'}
+    ]);
+  }
 
   ngOnInit() {
     this.message = new Message('danger', '');
