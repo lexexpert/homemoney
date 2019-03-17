@@ -10,7 +10,7 @@
 </div>
 <section class="section">
   <div class="row text-center" *ngIf="!isLoaded">
-    Loading ...
+    <app-loader></app-loader> Loading...
   </div>
   <div class="row" *ngIf="isLoaded">
     <app-bill-card [bill]="bill" [currency]="currency" [currency2]="currency2"></app-bill-card>
