@@ -44,7 +44,7 @@ export class PlanningPageComponent implements OnInit, OnDestroy {
   getCategoryCost(cat: CategoryModel): number {
     const catEvents = this.events.filter(e => e.category === cat.id && e.type === 'outcome');
     return catEvents.reduce((total, e) => {
-      total += e.amount;
+      total += +e.amount;
       return total;
     }, 0);
   }

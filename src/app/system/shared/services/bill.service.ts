@@ -11,11 +11,11 @@ export class BillService extends BaseApi {
   }
 
   getBill(): Observable<BillModel> {
-    return this.get('bill');
+    return this.get('bill/');
   }
 
   updateBill(bill: BillModel): Observable<BillModel> {
-    return this.put('bill', bill);
+    return this.put('bill/', bill);
   }
 
   getCurrency(): Observable<any> {

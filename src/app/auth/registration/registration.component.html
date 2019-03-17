@@ -1,5 +1,5 @@
 <p class="text-xs-center">Регистрация для получения доступа</p>
-<form [formGroup]="form" (ngSubmit)="onSubmit()" >
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
   <div
     class="form-group"
     [ngClass]="{'has-error': form.get('email').invalid && form.get('email').touched}"

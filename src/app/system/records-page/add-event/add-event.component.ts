@@ -48,21 +48,21 @@ export class AddEventComponent implements OnInit, OnDestroy {
     if (amount < 0) { amount *= -1; }
 
     const event = new EventModel(
-      type, amount, +category, moment().format('DD.MM.YYYY HH:mm:ss'), description
+      type, +amount, +category, moment().format('DD.MM.YYYY HH:mm:ss'), description
     );
 
     this.sub1 = this.billService.getBill()
       .subscribe((bill: BillModel) => {
         let value = 0;
         if (type === 'outcome') {
-          if (amount > bill.value) {
-            this.showMessage(`На счету недостаточно средств. Вам не хватает ${amount - bill.value} ${bill.currency}`);
+          if (+amount > +bill.value) {
+            this.showMessage(`На счету недостаточно средств. Вам не хватает ${+amount - +bill.value} ${bill.currency}`);
             return;
           } else {
-            value = bill.value - amount;
+            value = +bill.value - +amount;
           }
         } else {
-          value = bill.value + amount;
+          value = +bill.value + +amount;
         }
         this.sub2 = this.billService.updateBill({value, currency: bill.currency})
           .mergeMap(() => this.eventsService.addEvent(event))

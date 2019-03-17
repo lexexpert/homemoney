@@ -28,7 +28,7 @@ export class EditCategoryComponent implements OnInit, OnDestroy {
   }
 
   onCategoryChange() {
-    this.currentCategory = this.categories.find(c => c.id === +this.currentCategoryId);
+    this.currentCategory = this.categories.find(c => +c.id === +this.currentCategoryId);
   }
 
   onSubmit(form: NgForm) {

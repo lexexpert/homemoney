@@ -50,11 +50,11 @@ export class HistoryPageComponent implements OnInit, OnDestroy {
     this.chartData = [];
 
     this.categories.forEach((cat) => {
-      const catEvent = this.filteredEvents.filter((e) => e.category === cat.id && e.type === 'outcome');
+      const catEvent = this.filteredEvents.filter((e) => e.category === cat.id && e.type === e.type);
       this.chartData.push({
         name: cat.name,
         value: catEvent.reduce((total, e) => {
-          total += e.amount;
+          total += +e.amount;
           return total;
         }, 0)
       });
@@ -81,7 +81,7 @@ export class HistoryPageComponent implements OnInit, OnDestroy {
         return filterData.types.indexOf(e.type) !== -1;
       })
       .filter((e) => {
-        return filterData.categories.indexOf(e.category) !== -1;
+        return filterData.categories.indexOf(+e.category) !== -1;
       })
       .filter((e) => {
         const momentDate = moment(e.date, 'DD.MM.YYYY HH:mm:ss');
