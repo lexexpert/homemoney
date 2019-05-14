@@ -28,10 +28,10 @@ export class LoginComponent implements OnInit {
     private title: Title,
     private meta: Meta
   ) {
-    title.setTitle('Вход - Домашняя бухгалтерия');
+    title.setTitle('Log in - HomeMoney');
     meta.addTags([
-      {name: 'keywords', content: 'Домашняя бухгалтерия, домашние финансы, персональные финансы'},
-      {name: 'description', content: 'Страница входа в Домашнюю бухгалтерию'}
+      {name: 'keywords', content: 'Home Money, Home Finance, Personal Finance'},
+      {name: 'description', content: 'Login page of Home Money'}
     ]);
   }
 
@@ -41,12 +41,12 @@ export class LoginComponent implements OnInit {
       .subscribe((params: Params) => {
         if (params.nowCanLogin) {
           this.showMessage({
-            text: 'Теперь Вы можете авторизоваться',
+            text: 'You can now log in',
             type: 'success'
           });
         } else if (params['accessDenied']) {
           this.showMessage({
-            text: 'Необходимо авторизоваться',
+            text: 'Log in required',
             type: 'danger'
           });
         }
@@ -76,13 +76,13 @@ export class LoginComponent implements OnInit {
             this.router.navigate(['/system', 'bill']);
           } else {
             this.showMessage({
-              text: 'Неправильный пароль',
+              text: 'Wrong password',
               type: 'danger'
             });
           }
         } else {
           this.showMessage({
-            text: 'Такого пользователя не существует',
+            text: 'This user does not exist',
             type: 'danger'
           });
         }
